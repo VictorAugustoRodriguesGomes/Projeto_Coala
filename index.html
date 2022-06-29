@@ -12,30 +12,30 @@
 
 <body>
     <section>
-        <div class="box">
+        <div>
             <div class="container">
-                <div id="divHoras" class="divHoras">
+                <div id="divHours" class="divHours">
                     <span id="h"></span> <label> : </label>
                     <span id="m"></span> <label> : </label>
                     <span id="s"></span>
-                    <h2 id="divData"></h2>
+                    <h2 id="divDate"></h2>
                 </div>
 
-                <div class="calendario">
-                    <div class="calendarioHeader">
-                        <span class="mesSelecionado" id="mesSelecionado"></span>
-                        <div class="anoSelecionado">
-                            <span class="mudarAno" id="anoAnterior">
+                <div class="calendar">
+                    <div class="containerCalendar">
+                        <span class="selectedMonth" id="selectedMonth"></span>
+                        <div class="selectedYear">
+                            <span class="changeYear" id="lastYear">
                                 <pre> < </pre>
                             </span>
-                            <span id="ano"></span>
-                            <span class="mudarAno" id="proximoAno">
+                            <span id="year"></span>
+                            <span class="changeYear" id="nextYear">
                                 <pre> > </pre>
                             </span>
                         </div>
                     </div>
-                    <div class="calendarioBody">
-                        <div class="diaSemanasCalendario">
+                    <div class="conntainerCalendar">
+                        <div class="dayWeeksCalendar">
                             <div>Don</div>
                             <div>Seg</div>
                             <div>Ter</div>
@@ -44,35 +44,36 @@
                             <div>Sex</div>
                             <div>Sáb</div>
                         </div>
-                        <div class="diasCalendario"></div>
+                        <div class="calendarDays"></div>
                     </div>
-                    <div class="listaMes"></div>
+                    <div class="monthList"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="footeRcontainer">
-            <div class="sec sobre">
+        <div class="container">
+            <div class="about">
                 <h2>Sobre o Projeto</h2>
-                <p> Olá, meu nome é Victor Augusto e sou responsável por desenvolver esse site.</p>
-                <p> O objetivo é demostra as minhas habilidades como programador. </p>
+                <p> Olá! Meu nome é Victor Augusto e sou responsável por desenvolver esse projeto.</p>
+                <p> O objetivo é demostrar as minhas habilidades como desenvolvedor. </p>
                 <p> Desenvolvi esse projeto que informa o horário e a data atual de Brasília, a hora oficial do Brasil.
                 </p>
-                <p> O site também conta com um calendário que possui algumas interações. </p>
-                <p> O projeto foi desenvolvido utilizando apenas HTML, CSS e JS (Java Script). </p>
+                <p> O projeto também conta com um calendário que possui algumas interações. </p>
+                <p> O projeto foi desenvolvido utilizando apenas HTML, CSS e JS (JavaScript). </p>
                 <p> Então o que você achou desse projeto? </p>
                 <p> Mande sua mensagem para esse e-mail: victor.augusto.desenvolvedor@gmail.com. </p>
-                <p> E se você quiser ver mais dos meus projetos, confiram o meu portifólio. </p>
-                <p> Para mais informações de contatos e afins, meu currículo se encontra a sua disposição logo a baixo.
+                <p> E se você quiser ver mais dos meus projetos, confiram o meu LinkedIn ou o meu GitHub. </p>
+                <p> Para mais informações de contatos e afins, o meu currículo se encontra a sua disposição logo a
+                    baixo.
                 </p>
 
-                <div class="campobtn">
+                <div class="containerBTN">
                     <a class="btn" href="src/doc/Victor Augusto Rodrigues Gomes - Currículo.pdf"
                         download="Victor Augusto Rodrigues Gomes - Currículo.pdf" type="application/pdf"
                         class="btn">Baixe meu Currículo</a>
-                    <a href=https://victor-augusto-dev.web.app/ class="btn"> Meu Portifólio </a>
+                    <a href=https://victor-augusto-dev.firebaseapp.com/ class="btn"> Meu Portfólio </a>
                     <a href="https://linkedin.com/in/victor-augusto-dev" class="btn"> Meu LinkedIn </a>
                     <a href="https://github.com/VictorAugustoRodriguesGomes" class="btn"> Meu GitHub </a>
                 </div>
@@ -83,7 +84,6 @@
     <div class="copyrightText">
         <p>Copyright © 2021-Atual. Victor Augusto. Todos os direitos reservados.</p>
     </div>
-
     <script src="src/js/index.js"></script>
 </body>
 

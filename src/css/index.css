@@ -1,13 +1,14 @@
-/* Base */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    scroll-behavior: smooth;
+    font-family: 'PT Serif', serif;
 }
 
-section{
+section {
     position: relative;
     display: flex;
     justify-content: center;
@@ -17,17 +18,17 @@ section{
     overflow: hidden;
 }
 
-section::before{
+section::before {
     content: '';
     position: absolute;
     width: 400px;
     height: 400px;
     background: linear-gradient(#ffc107, #e91e63);
     border-radius: 50%;
-    transform: translate(-250px,-120px);
+    transform: translate(-250px, -120px);
 }
 
-section::after{
+section::after {
     content: '';
     position: absolute;
     width: 350px;
@@ -37,12 +38,7 @@ section::after{
     transform: translate(250px, 150px);
 }
 
-.box{
-    position: relative;
-    z-index: 1000;
-}
-
-.container{
+section .container {
     position: relative;
     width: 100%;
     min-height: 400px;
@@ -55,43 +51,41 @@ section::after{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 1000;
 }
 
-/* Hora e dia*/
-
-.divHoras{
+.divHours {
     text-align: center;
     color: #ffffff;
     padding-right: 25px;
     padding-left: 50px;
 }
 
-.divHoras span{
+.divHours span {
     font-size: 50px;
     padding: 10px;
 }
 
-.divHoras label{
+.divHours label {
     font-size: 50px;
     padding: 5px;
 }
 
-.divHoras h2{
+.divHours h2 {
     font-family: serif;
     font-size: 18px;
     padding: 10px;
     margin-bottom: 30px;
 }
 
-/*Calendario*/
-
-.calendario {
+.calendar {
     padding: 25px 50px 25px 25px;
     position: relative;
     overflow: hidden;
 }
 
-.calendarioHeader {
+.containerCalendar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,31 +94,31 @@ section::after{
     padding: 10px;
 }
 
-.calendarioBody {
+.conntainerCalendar {
     padding: 10px;
 }
 
-.diaSemanasCalendario {
+.dayWeeksCalendar {
     height: 50px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-weight: 600;
 }
 
-.diaSemanasCalendario div {
+.dayWeeksCalendar div {
     display: grid;
     place-items: center;
     color: #ffffff80;
 }
 
-.diasCalendario {
+.calendarDays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
     color: #ffffff;
 }
 
-.diasCalendario div {
+.calendarDays div {
     width: 50px;
     height: 50px;
     display: flex;
@@ -134,99 +128,98 @@ section::after{
     position: relative;
     cursor: pointer;
     animation: to-top 1s forwards;
-    /* border-radius: 50%; */
 }
 
-.diasCalendario div span {
+.calendarDays div span {
     position: absolute;
 }
 
-.diasCalendario div:hover span {
+.calendarDays div:hover span {
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
-.diasCalendario div span:nth-child(1),
-.diasCalendario div span:nth-child(3) {
+.calendarDays div span:nth-child(1),
+.calendarDays div span:nth-child(3) {
     width: 2px;
     height: 0;
     background-color: #ffffff;
 }
 
-.diasCalendario div:hover span:nth-child(1),
-.diasCalendario div:hover span:nth-child(3) {
+.calendarDays div:hover span:nth-child(1),
+.calendarDays div:hover span:nth-child(3) {
     height: 100%;
 }
 
-.diasCalendario div span:nth-child(1) {
+.calendarDays div span:nth-child(1) {
     bottom: 0;
     left: 0;
 }
 
-.diasCalendario div span:nth-child(3) {
+.calendarDays div span:nth-child(3) {
     top: 0;
     right: 0;
 }
 
-.diasCalendario div span:nth-child(2),
-.diasCalendario div span:nth-child(4) {
+.calendarDays div span:nth-child(2),
+.calendarDays div span:nth-child(4) {
     width: 0;
     height: 2px;
     background-color: #ffffff;
 }
 
-.diasCalendario div:hover span:nth-child(2),
-.diasCalendario div:hover span:nth-child(4) {
+.calendarDays div:hover span:nth-child(2),
+.calendarDays div:hover span:nth-child(4) {
     width: 100%;
 }
 
-.diasCalendario div span:nth-child(2) {
+.calendarDays div span:nth-child(2) {
     top: 0;
     left: 0;
 }
 
-.diasCalendario div span:nth-child(4) {
+.calendarDays div span:nth-child(4) {
     bottom: 0;
     right: 0;
 }
 
-.diasCalendario div:hover span:nth-child(2) {
+.calendarDays div:hover span:nth-child(2) {
     transition-delay: 0.2s;
 }
 
-.diasCalendario div:hover span:nth-child(3) {
+.calendarDays div:hover span:nth-child(3) {
     transition-delay: 0.4s;
 }
 
-.diasCalendario div:hover span:nth-child(4) {
+.calendarDays div:hover span:nth-child(4) {
     transition-delay: 0.6s;
 }
 
-.diasCalendario div.curr-date,
-.diasCalendario div.curr-date:hover {
+.calendarDays div.curr-date,
+.calendarDays div.curr-date:hover {
     background-color: #ffffff80;
     color: #000000;
 }
 
-.diasCalendario div.curr-date span {
+.calendarDays div.curr-date span {
     display: none;
 }
 
-.mesSelecionado {
+.selectedMonth {
     padding: 5px 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.mesSelecionado:hover {
+.selectedMonth:hover {
     background-color: #ffffff80;
 }
 
-.anoSelecionado {
+.selectedYear {
     display: flex;
     align-items: center;
 }
 
-.mudarAno {
+.changeYear {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -236,11 +229,11 @@ section::after{
     cursor: pointer;
 }
 
-.mudarAno:hover {
+.changeYear:hover {
     background-color: #ffffff80;
 }
 
-.listaMes {
+.monthList {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -256,7 +249,7 @@ section::after{
     pointer-events: none;
 }
 
-.listaMes.show {
+.monthList.show {
     transform: scale(1);
     visibility: visible;
     pointer-events: visible;
@@ -264,12 +257,12 @@ section::after{
     background: #ffffff;
 }
 
-.listaMes > div {
+.monthList>div {
     display: grid;
     place-items: center;
 }
 
-.listaMes > div > div {
+.monthList>div>div {
     width: 100%;
     padding: 5px 20px;
     border-radius: 10px;
@@ -278,7 +271,7 @@ section::after{
     color: var(--color-txt);
 }
 
-.listaMes > div > div:hover {
+.monthList>div>div:hover {
     background-color: var(--color-hover);
 }
 
@@ -287,44 +280,38 @@ section::after{
         transform: translateY(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-/*fooder*/
-
-footer{
-    font-family: serif;
+footer {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 50px 100px;
-    background: #161623;;
+    padding: 50px 100px 0px 100px;
+    background: #161623;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-footer .footeRcontainer .sec.sobre{
+footer .container .about {
     width: 100%;
 }
 
-.campobtn{
+.containerBTN {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-footer .footeRcontainer .campobtn .btn{
-    font-family: serif;
+footer .container .containerBTN .btn {
     background: #5c74fc;
     color: #ffffff;
     padding: 10px 29px;
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    letter-spacing: 2px;
     margin-bottom: 0px;
     border-radius: 4px;
     cursor: pointer;
@@ -332,18 +319,20 @@ footer .footeRcontainer .campobtn .btn{
     transition: 0.5s;
 }
 
-footer .footeRcontainer .campobtn .btn:hover{
+footer .container .containerBTN .btn:hover {
     color: #000000;
+    letter-spacing: 4px;
 }
 
-footer .footeRcontainer h2{
+footer .container h2 {
     position: relative;
     color: #ffffff;
-    font-family: serif;
+    font-size: 25px;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
-footer .footeRcontainer h2::before{
+footer .container h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -353,130 +342,129 @@ footer .footeRcontainer h2::before{
     background: #5c74fc;
 }
 
-footer p{
+footer p {
+    font-size: 18px;
+    font-weight: 400;
     color: #ffffff;
-    font-family: serif;
+    margin-bottom: 5px;
 }
 
-.copyrightText{
+.copyrightText {
     width: 100%;
-    font-family: serif;
     background: #161623;
     padding: 25px 100px;
     text-align: center;
     color: #ffffff;
 }
 
-/*footer responsive*/
 @media (max-width: 991px) {
-    footer{
+    footer {
         padding: 25px;
-    }
-    footer .footeRcontainer{
-        flex-direction: column;
+        display: block;
     }
 
-    footer .footeRcontainer .sec{
-        margin-right: 0;
-        margin-bottom: 40px;
+    footer .container .about {
+        width: 100%;
     }
 
-    footer .footeRcontainer .sec.sobre{
-       width: 100%;
+    footer .container .containerBTN .btn {
+        display: block;
+        text-align: center;
     }
 
-    .copyrightText{
+    footer .container .containerBTN .btn:hover {
+        color: #000000;
+        letter-spacing: 2px;
+    }
+
+    .copyrightText {
         padding: 0px 25px 25px 25px;
     }
 }
 
-
-/*tablit*/
-@media only screen and (min-width: 767px) and (max-width: 991px) { 
-	.container {
-        display: grid; 
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    section .container {
+        display: grid;
     }
 
-    .divHoras {
+    .divHours {
         padding: 50px 0px 25px 0px;
     }
 
-    .calendario {
+    .calendar {
         padding: 25px 50px 25px 50px;
     }
 }
 
-/*celular*/
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    .container {
-        display: grid; 
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    section .container {
+        display: grid;
     }
 
-    .divHoras {
+    .divHours {
         padding: 30px 0px 10px 0px;
     }
 
-    .divHoras h2 {
+    .divHours h2 {
         font-family: serif;
         font-size: 16px;
         padding: 5px;
         margin-bottom: 20px;
     }
 
-    .calendario {
+    .calendar {
         padding: 10px 15px 25px 15px;
     }
 
-    .calendarioBody {
+    .conntainerCalendar {
         padding: 5px;
     }
 
-    .diasCalendario div {
+    .calendarDays div {
         width: 40px;
         height: 40px;
     }
 
-    .calendarioHeader {
+    .containerCalendar {
         font-size: 20px;
         padding: 5px;
     }
 
-    .mudarAno {
+    .changeYear {
         margin: 0 5px;
     }
 
-    .diaSemanasCalendario {
-        font-weight: normal; 
+    .dayWeeksCalendar {
+        font-weight: normal;
     }
 }
 
-/*celular Virado*/
-@media only screen and (min-device-width: 480px) and (max-device-width: 767px){
-    .container {
-        display: flex; 
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) {
+    section .container {
+        display: flex;
         margin-bottom: 25px;
         margin-top: 25px;
     }
 
-    .divHoras {
+    .divHours {
         padding: 0px;
     }
 
-    .divHoras span {
+    .divHours span {
         font-size: 40px;
         padding: 10px;
     }
 
-    .divHoras h2 {
+    .divHours h2 {
         font-size: 14px;
         margin-bottom: 0px;
     }
 
-    .calendario {
-        padding: 25px ;
+    .calendar {
+        padding: 25px;
     }
 
     .copyrightText {
-        padding: 25px 40px;
+        padding: 0 25px 25px 25px;
     }
 }
