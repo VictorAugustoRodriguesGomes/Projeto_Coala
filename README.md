@@ -1,10 +1,8 @@
 # Projeto Coala
 
-Olá! Meu nome é Victor Augusto e sou responsável por desenvolver esse projeto.
-O objetivo é demostrar as minhas habilidades como desenvolvedor.
-Desenvolvi esse projeto que informa o horário e a data atual de Brasília, a hora oficial do Brasil.
-O projeto também conta com um calendário que possui algumas interações.
-O projeto foi desenvolvido utilizando apenas HTML, CSS e JS (JavaScript).
+Olá! Meu nome é Victor Augusto e sou responsável por desenvolver esse projeto, nomeado como Projeto Coala(utilizei esse nome genérico para organização pessoal).
+
+Com objetivo de demostrar as minhas habilidades como desenvolvedor, desenvolvi esse projeto que informa o horário e a data atual de Brasília, a hora oficial do Brasil. O projeto também conta com um calendário que possui algumas interações. O projeto foi desenvolvido utilizando apenas HTML, CSS e JS (JavaScript).
 </br>
 </br>
 
